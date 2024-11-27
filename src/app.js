@@ -5,7 +5,7 @@ const { loadModel, predict } = require('./inference');
     const model = await loadModel();
     console.log('modul loaded!');
     const server = Hapi.server({
-        host: process.env.NODE_ENV !== 'production' ? 'localhost': '0.0.0.0/0',
+        host: process.env.NODE_ENV !== 'production' ? 'localhost': '0.0.0.0',
         port: 3000
     });
 
